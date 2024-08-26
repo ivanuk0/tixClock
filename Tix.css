@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  flex-direction: column; /* This changes the direction from row to column */
+  gap: 10px; /* Optional: Adds space between items */
+  margin:100px;
+  /*height:30px;*/
+  /*width:30px;*/
+}
+
+.Tix {
+  opacity: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center; /* Centers the grid horizontally */
+  align-items: center; /* Centers the grid vertically */
+  gap: 200px;
+  padding: 0;
+}
+
+.Tix-hour,
+.Tix-minute {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust to fit the number of blocks */
+  justify-content: center; /* Center the content horizontally */
+  gap: 10px; /* Space between blocks */
+}
+
+.Tix-minute {
+  grid-template-columns: repeat(6, 1fr); /* Adjust to fit the number of blocks */
+}
+
+.Tix-hour-block,
+.Tix-minute-block {
+  height: 20px;
+  width: 20px;
+  margin: auto; /* Centers the block within its grid cell */
+  background-color: white;
+  background: radial-gradient(rgba(251, 122, 10, 0.8), rgba(178, 95, 23, 0.8));
+  border-radius: 3px;
+}
+
+.emptyBlocks {
+  height: 20px;
+  width: 5px;
+  background-color: black;
+}
